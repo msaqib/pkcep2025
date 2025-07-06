@@ -239,6 +239,70 @@
             color: #666;
             font-style: italic;
         }
+
+        .panelists-section {
+            margin: 30px 0;
+        }
+
+        .panelists-section h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        .panelist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .panelist-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            border-left: 4px solid #3498db;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .panelist-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .panelist-card h4 {
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        .affiliation {
+            color: #3498db;
+            font-weight: 500;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .panelist-card p {
+            color: #666;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .panelist-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .panelist-card {
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -385,10 +449,44 @@
                     <h3>Panel Discussion</h3>
                     <p>This panel discussion will explore the future of computing education in Pakistan, with a particular focus on how artificial intelligence is reshaping the landscape of computer science education and its implications for educational practices, curriculum development, and student preparation.</p>
                 </div>
-                <div class="speaker-bio">
-                    <h3>About the Moderator</h3>
-                    <p>Details about Rabia Sirhindi will be provided.</p>
+                
+                <div class="panelists-section">
+                    <h3>Panelists</h3>
+                    <div class="panelist-grid">
+                        <div class="panelist-card">
+                            <h4>Dr. Ethel Tshukudu</h4>
+                            <div class="affiliation">San José State University</div>
+                            <p>Assistant Professor of Computer Science and Science Education, founder of CSEdBotswana, and ACM SIGCSE Board member with expertise in bilingual programming and computing education contextualization.</p>
+                        </div>
+                        
+                        <div class="panelist-card">
+                            <h4>Dr. Muhammad Hamad Alizai</h4>
+                            <div class="affiliation">LUMS</div>
+                            <p>Associate Professor and Chair of Computer Science at SBASSE, LUMS, and Director of LUMS Learning Institute with experience in large-scale computing education and pedagogical capacity-building.</p>
+                        </div>
+                        
+                        <div class="panelist-card">
+                            <h4>Dr. Mobin Javed</h4>
+                            <div class="affiliation">LUMS</div>
+                            <p>Associate Professor in Computer Science at LUMS with research focus on security, privacy, and Internet measurement. Award-winning researcher and advocate for industry-aligned computing education.</p>
+                        </div>
+                        
+                        <div class="panelist-card">
+                            <h4>Dr. Matthew Barr</h4>
+                            <div class="affiliation">University of Glasgow</div>
+                            <p>Senior Lecturer leading work-based learning initiatives, founder of Ada Scotland Festival, and advocate for inclusive computing education with extensive experience in industry-academia partnerships.</p>
+                        </div>
+                    </div>
                 </div>
+                
+                <!-- <div class="speaker-bio">
+                    <h3>Moderator</h3>
+                    <div class="panelist-card">
+                        <h4>Rabia Sirhindi</h4>
+                        <div class="affiliation">Details to be provided</div>
+                        <p>Panel moderator with expertise in computing education and AI integration in educational contexts.</p>
+                    </div>
+                </div> -->
             </div>
         </article>
     </div>
